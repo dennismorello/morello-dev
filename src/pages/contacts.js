@@ -7,24 +7,6 @@ import Layout from "../components/layout/layout.component";
 import NavBar from "../components/nav-bar/nav-bar.component";
 
 export default function Contacts() {
-  const handleContactFormSubmit = async ({
-    message,
-    sender_email,
-    sender_name,
-    subject,
-  }) => {
-    await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        senderEmail: sender_email,
-        senderName: sender_name,
-        subject,
-        message,
-      }),
-    });
-  };
-
   return (
     <Layout>
       <Head>
@@ -44,7 +26,7 @@ export default function Contacts() {
       </Heading>
 
       <Container as="section" maxW="6xl">
-        <ContactForm onSubmit={handleContactFormSubmit} />
+        <ContactForm method="POST" action="/api/email/send" />
       </Container>
     </Layout>
   );

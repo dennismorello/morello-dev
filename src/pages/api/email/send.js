@@ -1,18 +1,18 @@
-import { sendEmail } from "../../services/email";
+import { sendEmail } from "../../../services/email";
 
 export default async (request, response) => {
   if (request.method === "POST") {
-    const { senderEmail, senderName, subject, message } = request.body;
+    const { sender_email, sender_name, subject, message } = request.body;
 
-    const emailResponse = await sendEmail({
+    await sendEmail({
       apiKey: process.env.SENDGRID_API_KEY,
-      senderEmail,
-      senderName,
+      senderEmail: sender_email,
+      senderName: sender_name,
       subject,
       message,
     });
 
-    return response.status(emailResponse.status).end();
+    return response.redirect(request.headers.referer);
   }
 
   return response.status(405).json({
