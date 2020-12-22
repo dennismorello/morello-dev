@@ -2,9 +2,9 @@ import { Image } from "@chakra-ui/react";
 
 const UserPicture = (props) => (
   <Image
-    boxSize={[64, undefined, "xs"]}
+    boxSize={[64, null, "xs"]}
     bgColor="teal.300"
-    borderRadius={["full", undefined, "2xl"]}
+    borderRadius={["full", null, "2xl"]}
     shadow="dark-lg"
     objectFit="cover"
     objectPosition="center"

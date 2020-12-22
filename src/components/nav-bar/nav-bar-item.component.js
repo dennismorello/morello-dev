@@ -9,7 +9,8 @@ const NavBarItem = ({ href, ...otherProps }) => {
   return (
     <LinkButton
       href={href}
-      variant={href === pathname ? "solid" : "outline"}
+      size="sm"
+      variant={href === pathname ? "solid" : "ghost"}
       {...otherProps}
     />
   );

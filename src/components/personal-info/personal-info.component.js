@@ -6,9 +6,9 @@ import DetailRow from "../detail-row/detail-row.component";
 const PersonalInfo = () => (
   <SimpleGrid
     py={8}
-    columns={[1, undefined, 2]}
+    columns={[1, null, 2]}
     columnGap={16}
-    rowGap={[4, undefined, 6]}
+    rowGap={[4, null, 6]}
   >
     <DetailRow title="Name">Dennis Morello</DetailRow>
     <DetailRow title="Role">Front-End Engineer</DetailRow>
