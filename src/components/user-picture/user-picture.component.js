@@ -8,7 +8,7 @@ const UserPicture = (props) => (
     shadow="dark-lg"
     objectFit="cover"
     objectPosition="center"
-    alt="Dennis Morello"
+    alt="Avatar of Dennis Morello"
     src="/images/profile.png"
     {...props}
   />
