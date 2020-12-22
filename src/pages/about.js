@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { Container, Divider, Heading, chakra } from "@chakra-ui/react";
 
 // Components
@@ -7,9 +7,7 @@ import PersonalInfo from "../components/personal-info/personal-info.component";
 
 const AboutPage = () => (
   <Layout>
-    <Head>
-      <title>About | Dennis Morello</title>
-    </Head>
+    <NextSeo title="About" />
 
     <Heading
       as="h1"

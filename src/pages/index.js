@@ -1,6 +1,5 @@
-import Head from "next/head";
-import Link from "next/link";
-import { Button, Flex, Heading, Stack, Text, chakra } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
+import { Flex, Heading, Stack, Text, chakra } from "@chakra-ui/react";
 
 // Components
 import Layout from "../components/layout/layout.component";
@@ -10,9 +9,7 @@ import UserPicture from "../components/user-picture/user-picture.component";
 
 const HomePage = () => (
   <Layout py={0} hasNavbar={false}>
-    <Head>
-      <title>Dennis Morello</title>
-    </Head>
+    <NextSeo title="Home" />
 
     <Flex
       as="section"

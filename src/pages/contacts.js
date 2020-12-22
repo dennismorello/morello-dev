@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Head from "next/head";
-import { Container, Heading, chakra, useToast } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
+import { Container, Heading, chakra } from "@chakra-ui/react";
 
 // Components
 import ContactForm from "../components/contact-form/contact-form.component";
@@ -8,7 +8,6 @@ import Layout from "../components/layout/layout.component";
 
 const ContactsPage = () => {
   const [isEmailBeingSent, setIsEmailBeingSent] = useState(false);
-  const toast = useToast();
 
   const handleContactFormSubmit = async (data) => {
     setIsEmailBeingSent(true);
@@ -18,9 +17,7 @@ const ContactsPage = () => {
 
   return (
     <Layout>
-      <Head>
-        <title>Contacts | Dennis Morello</title>
-      </Head>
+      <NextSeo title="Contacts" />
 
       <Heading
         as="h1"
