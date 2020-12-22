@@ -1,4 +1,4 @@
-import { Heading, VStack } from "@chakra-ui/react";
+import { Box, Heading, VStack } from "@chakra-ui/react";
 
 const DescriptiveBlock = ({ title, subtitle, children, ...otherProps }) => (
   <VStack align="flex-start" {...otherProps}>
@@ -15,7 +15,7 @@ const DescriptiveBlock = ({ title, subtitle, children, ...otherProps }) => (
     >
       {subtitle}
     </Heading>
-    {children}
+    <Box pt={[2, null, 4]}>{children}</Box>
   </VStack>
 );
 

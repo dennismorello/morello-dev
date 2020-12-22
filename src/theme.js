@@ -24,6 +24,11 @@ const theme = extendTheme({
         px: 0,
       },
     },
+    Divider: {
+      baseStyle: {
+        borderColor: "gray.500",
+      },
+    },
     Heading: {
       baseStyle: {
         textTransform: "uppercase",

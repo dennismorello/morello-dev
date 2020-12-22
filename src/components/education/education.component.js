@@ -1,4 +1,4 @@
-import { Box, Link, Text, VStack } from "@chakra-ui/react";
+import { Link, Text, VStack } from "@chakra-ui/react";
 
 // Components
 import DescriptiveBlock from "../descriptive-block/descriptive-block.component";
@@ -13,12 +13,10 @@ const Education = (props) => (
       }
       subtitle="Master's Degree in Computer Science Engineering, Computer Science Engineering, 110/110 with honors"
     >
-      <Box pt={4}>
-        <Text>
-          Design and development of an automatic fake reviews generator based on
-          neural networks.
-        </Text>
-      </Box>
+      <Text>
+        Design and development of an automatic fake reviews generator based on
+        neural networks.
+      </Text>
     </DescriptiveBlock>
     <DescriptiveBlock
       title={
@@ -28,12 +26,10 @@ const Education = (props) => (
       }
       subtitle="Bachelor's Degree in Information Technology Engineering, Information Technology Engineering, 105/110"
     >
-      <Box pt={4}>
-        <Text>
-          Design and development of an automated tool to systematically alter
-          JavaScript code for testing purposes.
-        </Text>
-      </Box>
+      <Text>
+        Design and development of an automated tool to systematically alter
+        JavaScript code for testing purposes.
+      </Text>
     </DescriptiveBlock>
     <DescriptiveBlock
       title={
