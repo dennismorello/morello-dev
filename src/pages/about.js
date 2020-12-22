@@ -25,7 +25,7 @@ const AboutPage = () => (
       About <chakra.span color="teal.300">me</chakra.span>
     </Heading>
 
-    <SectionWithHeading title="Personal info">
+    <SectionWithHeading id="personal-info" title="Personal info">
       <VStack align="stretch" justify="center">
         <PersonalInfo py={8} />
         <LinkButton
@@ -41,25 +41,25 @@ const AboutPage = () => (
 
     <Divider w={["full", null, "md"]} mx="auto" my={16} />
 
-    <SectionWithHeading title="Work Experience">
+    <SectionWithHeading id="work-experience" title="Work Experience">
       <WorkExperiences pt={8} />
     </SectionWithHeading>
 
     <Divider w={["full", null, "md"]} mx="auto" my={16} />
 
-    <SectionWithHeading title="Education">
+    <SectionWithHeading id="education" title="Education">
       <Education pt={8} />
     </SectionWithHeading>
 
     <Divider w={["full", null, "md"]} mx="auto" my={16} />
 
-    <SectionWithHeading title="Projects">
+    <SectionWithHeading id="projects" title="Projects">
       <Projects pt={8} />
     </SectionWithHeading>
 
     <Divider w={["full", null, "md"]} mx="auto" my={16} />
 
-    <SectionWithHeading title="Publications">
+    <SectionWithHeading id="publications" title="Publications">
       <Publications pt={8} />
     </SectionWithHeading>
   </Layout>
