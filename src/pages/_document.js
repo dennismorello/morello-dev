@@ -16,10 +16,6 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap"
             rel="stylesheet"
           />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
         </Head>
 
         <body>
