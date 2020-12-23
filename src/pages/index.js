@@ -16,7 +16,7 @@ const HomePage = () => (
       align="center"
       justify="center"
       minH="100vh"
-      py={[12, null, 24]}
+      py={[16, null, 24]}
     >
       <ObliqueBackground display={["none", null, "block"]} />
 
