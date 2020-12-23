@@ -19,6 +19,7 @@ const UserPicture = (props) => {
         layout="fixed"
         width={imgSize ?? 256}
         height={imgSize ?? 256}
+        preload
       />
     </Box>
   );
