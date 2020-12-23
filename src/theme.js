@@ -9,6 +9,20 @@ const theme = extendTheme({
     body: "Poppins, sans-serif",
     heading: "Poppins, sans-serif",
   },
+  colors: {
+    instagram: {
+      50: "#ffe5f0",
+      100: "#fabad1",
+      200: "#f18fb0",
+      300: "#e96290",
+      400: "#e23771",
+      500: "#c81d57",
+      600: "#9d1544",
+      700: "#710c30",
+      800: "#46051d",
+      900: "#1d000b",
+    },
+  },
   components: {
     Button: {
       baseStyle: {

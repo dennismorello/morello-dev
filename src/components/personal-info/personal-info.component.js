@@ -18,24 +18,6 @@ const PersonalInfo = (props) => (
         dennismorello@gmail.com
       </Link>
     </DetailRow>
-    <DetailRow title="GitHub">
-      <Link
-        href="https://github.com/dennismorello"
-        rel="noopener"
-        target="_blank"
-      >
-        dennismorello
-      </Link>
-    </DetailRow>
-    <DetailRow title="Twitter">
-      <Link
-        href="https://twitter.com/dennismorello"
-        rel="noopener"
-        target="_blank"
-      >
-        @dennismorello
-      </Link>
-    </DetailRow>
   </SimpleGrid>
 );
 
