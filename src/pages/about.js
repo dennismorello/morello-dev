@@ -17,10 +17,16 @@ const AboutPage = () => (
 
     <Heading
       as="h1"
-      mb={[12, null, 20]}
       size="2xl"
       fontWeight="black"
       textAlign={["left", null, "center"]}
+      pos={["sticky", null, "relative"]}
+      top={[0, null, undefined]}
+      bg={["gray.800", null, undefined]}
+      zIndex={["sticky", null, undefined]}
+      py={[2, null, undefined]}
+      mb={[10, null, 20]}
+      mt={[-2, null, undefined]}
     >
       About <chakra.span color="teal.300">me</chakra.span>
     </Heading>
