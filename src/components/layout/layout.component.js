@@ -20,7 +20,7 @@ const Layout = ({ hasNavbar = true, children, ...otherProps }) => (
         borderBottom={[0, null, "1px"]}
         borderTop={["1px", null, 0]}
         borderColor={["gray.900", null, "gray.900"]}
-        zIndex="sticky"
+        zIndex="overlay"
         pos="fixed"
         w="full"
         left={0}
