@@ -5,6 +5,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import seo from "../next-seo.config";
 import theme from "../theme";
 
+import "../styles/main.css";
+
 function App({ Component, pageProps }) {
   return (
     <>
