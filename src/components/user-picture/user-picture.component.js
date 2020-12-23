@@ -16,7 +16,7 @@ const UserPicture = (props) => (
       layout="intrinsic"
       width={320}
       height={320}
-      preload
+      priority
     />
   </Box>
 );
