@@ -6,7 +6,7 @@ const SocialCard = ({ href, colorScheme, children, ...otherProps }) => (
     colorScheme={colorScheme}
     rel="noopener"
     target="_blank"
-    h={32}
+    h={[24, null, 32]}
     rounded="2xl"
     {...otherProps}
   >

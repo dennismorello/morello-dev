@@ -39,7 +39,7 @@ const HomePage = () => (
             <Heading as="h6" size="md">
               Hi there,
             </Heading>
-            <Heading as="h1" size="2xl" fontWeight="black">
+            <Heading as="h1" size="2xl" fontWeight="black" lineHeight="100%">
               I am <chakra.span color="teal.300">Dennis Morello</chakra.span>
             </Heading>
           </Stack>

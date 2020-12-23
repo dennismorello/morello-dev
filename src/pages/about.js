@@ -1,5 +1,5 @@
 import { NextSeo } from "next-seo";
-import { Divider, Heading, VStack, chakra } from "@chakra-ui/react";
+import { Divider, Flex, Heading, VStack, chakra } from "@chakra-ui/react";
 
 // Components
 import Education from "../components/education/education.component";
@@ -28,14 +28,15 @@ const AboutPage = () => (
     <SectionWithHeading id="personal-info" title="Personal info">
       <VStack align="stretch" justify="center">
         <PersonalInfo py={8} />
-        <LinkButton
-          href="https://standardresume.co/r/0i2cNF8K6UgXj3gOPANwj"
-          rel="noopener"
-          target="_blank"
-          mx="auto"
-        >
-          Link to my Resume
-        </LinkButton>
+        <Flex justifyContent={["center", null, "flex-start"]}>
+          <LinkButton
+            href="https://standardresume.co/r/0i2cNF8K6UgXj3gOPANwj"
+            rel="noopener"
+            target="_blank"
+          >
+            Link to my Resume
+          </LinkButton>
+        </Flex>
       </VStack>
     </SectionWithHeading>
 
