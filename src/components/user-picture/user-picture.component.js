@@ -1,17 +1,27 @@
-import { Image } from "@chakra-ui/react";
+import NextImage from "next/image";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 
-const UserPicture = (props) => (
-  <Image
-    boxSize={[64, null, "xs"]}
-    bgColor="teal.300"
-    borderRadius={["full", null, "2xl"]}
-    shadow="dark-lg"
-    objectFit="cover"
-    objectPosition="center"
-    alt="Avatar of Dennis Morello"
-    src="/images/profile.png"
-    {...props}
-  />
-);
+const UserPicture = (props) => {
+  const imgSize = useBreakpointValue([256, null, 320]);
+
+  return (
+    <Box
+      boxSize={imgSize}
+      bgColor="teal.300"
+      borderRadius={["full", null, "2xl"]}
+      shadow="dark-lg"
+      overflow="hidden"
+      {...props}
+    >
+      <NextImage
+        src="/images/profile.png"
+        alt="Avatar of Dennis Morello"
+        layout="fixed"
+        width={imgSize ?? 256}
+        height={imgSize ?? 256}
+      />
+    </Box>
+  );
+};
 
 export default UserPicture;

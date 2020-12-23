@@ -26,7 +26,7 @@ const HomePage = () => (
         spacing={16}
         zIndex={10}
       >
-        <UserPicture />
+        <UserPicture flexShrink={0} />
 
         <Stack
           align={["center", null, "start"]}
