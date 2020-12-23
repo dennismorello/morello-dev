@@ -11,10 +11,24 @@ export default class Document extends NextDocument {
             type="image/png"
             href="/favicon-32x32.png"
           />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="stylesheet" href="/fonts/fonts.css" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            href="/fonts/Poppins/Poppins-Regular.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/Poppins/Poppins-Bold.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/Poppins/Poppins-Black.ttf"
+            as="font"
+            crossOrigin=""
           />
         </Head>
 
