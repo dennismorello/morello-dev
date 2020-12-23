@@ -8,7 +8,9 @@ const NavBar = (props) => (
     <NavBarItem href="/">Home</NavBarItem>
     <NavBarItem href="/about">About</NavBarItem>
     <NavBarItem href="/contacts">Contacts</NavBarItem>
-    <NavBarItem href="/blog">Blog</NavBarItem>
+    <NavBarItem href="https://blog.morello.dev" rel="noopener" target="_blank">
+      Blog
+    </NavBarItem>
   </HStack>
 );
 
