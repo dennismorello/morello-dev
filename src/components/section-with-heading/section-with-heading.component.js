@@ -16,7 +16,6 @@ const SectionWithHeading = ({
       maxW="6xl"
       id={id}
       css={{
-        scrollMarginTop,
         paddingTop: scrollMarginTop,
         marginTop: -scrollMarginTop,
         ...css,
