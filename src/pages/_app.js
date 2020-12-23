@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import seo from "../next-seo.config";
+import defaultSeo, { socialProfileJsonLd } from "../next-seo.config";
 import theme from "../theme";
 
 import "../styles/main.css";
@@ -13,7 +13,8 @@ function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <DefaultSeo {...seo} />
+      <DefaultSeo {...defaultSeo} />
+      <SocialProfileJsonLd {...socialProfileJsonLd} />
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
