@@ -11,6 +11,7 @@ export default class Document extends NextDocument {
             type="image/png"
             href="/favicon-32x32.png"
           />
+          <link rel="manifest" href="/site.webmanifest" />
           <link
             rel="preload"
             href="/fonts/Poppins/Poppins-Regular.ttf"
