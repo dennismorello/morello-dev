@@ -21,7 +21,7 @@ const WorkExperiences = (props) => (
       subtitle="Software Engineer"
     >
       <Text>I am responsible of many things, including:</Text>
-      <UnorderedList pl={4}>
+      <UnorderedList pl={4} py={2}>
         <ListItem>
           architecting, building and maintaining next-gen web-apps for our
           products
