@@ -64,6 +64,11 @@ const theme = extendTheme({
         }),
       },
     },
+    Tag: {
+      defaultProps: {
+        colorScheme: "teal",
+      },
+    },
     Textarea: {
       defaultProps: {
         size: "lg",

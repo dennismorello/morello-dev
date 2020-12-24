@@ -1,4 +1,4 @@
-import LinkButton from "../link-button/link-button.component";
+import LinkButton from "../LinkButton/LinkButton.component";
 
 const SocialCard = ({ href, colorScheme, children, ...otherProps }) => (
   <LinkButton

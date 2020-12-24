@@ -1,7 +1,7 @@
 import { HStack } from "@chakra-ui/react";
 
 // Components
-import NavBarItem from "./nav-bar-item.component";
+import NavBarItem from "./NavBarItem.component";
 
 const NavBar = (props) => (
   <HStack as="nav" {...props}>
