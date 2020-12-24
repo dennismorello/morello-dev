@@ -2,6 +2,7 @@ const { MS_CLARITY_MEASUREMENT_ID } = process.env;
 
 const MicrosoftClarityScript = () => (
   <script
+    type="text/javascript"
     dangerouslySetInnerHTML={{
       __html: `
         (function(c,l,a,r,i,t,y){
