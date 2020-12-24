@@ -51,14 +51,14 @@ const AboutPage = ({ profile }) => {
 
       <Divider w={["full", null, "md"]} mx="auto" my={16} />
 
-      <SectionWithHeading id="education" title="Education">
-        <Education educationList={education} pt={8} />
+      <SectionWithHeading id="projects" title="Projects">
+        <Projects projectsList={projects} pt={8} />
       </SectionWithHeading>
 
       <Divider w={["full", null, "md"]} mx="auto" my={16} />
 
-      <SectionWithHeading id="projects" title="Projects">
-        <Projects projectsList={projects} pt={8} />
+      <SectionWithHeading id="education" title="Education">
+        <Education educationList={education} pt={8} />
       </SectionWithHeading>
 
       <Divider w={["full", null, "md"]} mx="auto" my={16} />
