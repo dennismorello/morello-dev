@@ -2,8 +2,8 @@ import { NextSeo } from "next-seo";
 import { Container, Heading, SimpleGrid, chakra } from "@chakra-ui/react";
 
 // Components
-import Layout from "../components/Layout/Layout.component";
-import SocialCard from "../components/SocialCard/SocialCard.component";
+import Layout from "@/components/Layout/Layout.component";
+import SocialCard from "@/components/SocialCard/SocialCard.component";
 
 const ContactsPage = () => (
   <Layout>

@@ -2,13 +2,13 @@ import { NextSeo } from "next-seo";
 import { Divider, Heading, chakra } from "@chakra-ui/react";
 
 // Components
-import Education from "../components/AboutSections/Education.component";
-import Layout from "../components/Layout/Layout.component";
-import PersonalInfo from "../components/AboutSections/PersonalInfo.component";
-import Projects from "../components/AboutSections/Projects.component";
-import Publications from "../components/AboutSections/Publications.component";
-import SectionWithHeading from "../components/SectionWithHeading/SectionWithHeading.component";
-import WorkExperiences from "../components/AboutSections/WorkExperiences.component";
+import Education from "@/components/AboutSections/Education.component";
+import Layout from "@/components/Layout/Layout.component";
+import PersonalInfo from "@/components/AboutSections/PersonalInfo.component";
+import Projects from "@/components/AboutSections/Projects.component";
+import Publications from "@/components/AboutSections/Publications.component";
+import SectionWithHeading from "@/components/SectionWithHeading/SectionWithHeading.component";
+import WorkExperiences from "@/components/AboutSections/WorkExperiences.component";
 
 const AboutPage = ({ profile }) => {
   const { basics, education, projects, publications, work } = profile;

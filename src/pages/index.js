@@ -2,10 +2,10 @@ import { NextSeo } from "next-seo";
 import { Flex, Heading, Stack, Text, chakra } from "@chakra-ui/react";
 
 // Components
-import Layout from "../components/Layout/Layout.component";
-import LinkButton from "../components/LinkButton/LinkButton.component";
-import ObliqueBackground from "../components/ObliqueBackground/ObliqueBackground.component";
-import UserPicture from "../components/UserPicture/UserPicture.component";
+import Layout from "@/components/Layout/Layout.component";
+import LinkButton from "@/components/LinkButton/LinkButton.component";
+import ObliqueBackground from "@/components/ObliqueBackground/ObliqueBackground.component";
+import UserPicture from "@/components/UserPicture/UserPicture.component";
 
 const HomePage = () => (
   <Layout py={0} hasNavbar={false}>

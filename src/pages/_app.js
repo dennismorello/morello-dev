@@ -2,10 +2,12 @@ import Head from "next/head";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import { ChakraProvider } from "@chakra-ui/react";
 
+// Configurations
 import defaultSeo, { socialProfileJsonLd } from "../next-seo.config";
 import theme from "../theme";
 
-import "../styles/main.css";
+// Styles
+import "@/styles/main.css";
 
 function App({ Component, pageProps }) {
   return (

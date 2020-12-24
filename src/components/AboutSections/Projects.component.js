@@ -1,7 +1,7 @@
 import { Link, Tag, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
 // Components
-import DescriptiveBlock from "../DescriptiveBlock/DescriptiveBlock.component";
+import DescriptiveBlock from "@/components/DescriptiveBlock/DescriptiveBlock.component";
 
 const Projects = ({ projectsList, ...otherProps }) => (
   <VStack align="self-start" spacing={[8, null, 12]} {...otherProps}>

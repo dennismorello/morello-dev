@@ -1,8 +1,8 @@
 import { Link, Text, VStack } from "@chakra-ui/react";
 
 // Components
-import DateRange from "../DateRange/DateRange.component";
-import DescriptiveBlock from "../DescriptiveBlock/DescriptiveBlock.component";
+import DateRange from "@/components/DateRange/DateRange.component";
+import DescriptiveBlock from "@/components/DescriptiveBlock/DescriptiveBlock.component";
 
 const Publications = ({ publicationsList, ...otherProps }) => (
   <VStack align="self-start" spacing={[8, null, 12]} {...otherProps}>

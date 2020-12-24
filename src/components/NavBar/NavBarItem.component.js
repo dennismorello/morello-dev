@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 // Components
-import LinkButton from "../LinkButton/LinkButton.component";
+import LinkButton from "@/components/LinkButton/LinkButton.component";
 
 const NavBarItem = ({ href, ...otherProps }) => {
   const { pathname } = useRouter();
