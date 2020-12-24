@@ -22,7 +22,12 @@ const Education = ({ educationList, ...otherProps }) => (
           title={
             <Link href={website} isExternal>
               {institution} (
-              <DateRange startIsoDate={startDate} endIsoDate={endDate} />)
+              <DateRange
+                startIsoDate={startDate}
+                endIsoDate={endDate}
+                formatString="yyyy"
+              />
+              )
             </Link>
           }
           subtitle={`${studyType} in ${area}, ${gpa}`}
