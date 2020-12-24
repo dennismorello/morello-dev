@@ -2,6 +2,7 @@ import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 
 // Components
 import GoogleAnalyticsScript from "@/components/GoogleAnalyticsScript/GoogleAnalyticsScript.component";
+import MicrosoftClarityScript from "@/components/MicrosoftClarityScript/MicrosoftClarityScript.component";
 
 export default class Document extends NextDocument {
   render() {
@@ -34,6 +35,7 @@ export default class Document extends NextDocument {
             crossOrigin=""
           />
           <GoogleAnalyticsScript />
+          <MicrosoftClarityScript />
         </Head>
 
         <body>
