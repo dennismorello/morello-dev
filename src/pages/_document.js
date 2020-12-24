@@ -1,5 +1,8 @@
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 
+// Components
+import GoogleAnalyticsScript from "@/components/GoogleAnalyticsScript/GoogleAnalyticsScript.component";
+
 export default class Document extends NextDocument {
   render() {
     return (
@@ -30,6 +33,7 @@ export default class Document extends NextDocument {
             as="font"
             crossOrigin=""
           />
+          <GoogleAnalyticsScript />
         </Head>
 
         <body>
