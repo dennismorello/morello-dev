@@ -71,7 +71,7 @@ const AboutPage = ({ profile }) => {
 };
 
 export async function getStaticProps() {
-  const response = await fetch(process.env.GITCONNECTED_PORTFOLIO_URL);
+  const response = await fetch(process.env.GITCONNECTED_PORTFOLIO_API_URL);
 
   if (!response.ok) {
     return {
