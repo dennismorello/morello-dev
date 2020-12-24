@@ -9,6 +9,8 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <GoogleAnalyticsScript />
+          <MicrosoftClarityScript />
           <link
             rel="icon"
             sizes="32x32"
@@ -34,8 +36,6 @@ export default class Document extends NextDocument {
             as="font"
             crossOrigin=""
           />
-          <GoogleAnalyticsScript />
-          <MicrosoftClarityScript />
         </Head>
 
         <body>
