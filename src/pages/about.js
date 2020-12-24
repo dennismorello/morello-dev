@@ -13,8 +13,6 @@ import WorkExperiences from "../components/AboutSections/WorkExperiences.compone
 const AboutPage = ({ profile }) => {
   const { basics, education, projects, publications, work } = profile;
 
-  console.log(profile);
-
   return (
     <Layout>
       <NextSeo title="About" />
