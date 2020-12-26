@@ -74,8 +74,6 @@ export async function getStaticProps() {
       process.env.GITCONNECTED_USERNAME
     );
 
-    console.log(profile.basics);
-
     return {
       props: {
         user: profile.basics,
