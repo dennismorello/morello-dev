@@ -1,18 +1,18 @@
 import NextImage from "next/image";
 import { Box } from "@chakra-ui/react";
 
-const UserPicture = (props) => (
+const UserPicture = ({ alt, src, ...otherProps }) => (
   <Box
     boxSize={[64, null, "xs"]}
     bgColor="teal.300"
     borderRadius={["full", null, "2xl"]}
     shadow="dark-lg"
     overflow="hidden"
-    {...props}
+    {...otherProps}
   >
     <NextImage
-      src="/images/profile.png"
-      alt="Avatar of Dennis Morello"
+      src={src}
+      alt={alt}
       layout="intrinsic"
       width={320}
       height={320}

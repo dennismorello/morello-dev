@@ -10,6 +10,9 @@ import Publications from "@/components/AboutSections/Publications.component";
 import SectionWithHeading from "@/components/SectionWithHeading/SectionWithHeading.component";
 import WorkExperiences from "@/components/AboutSections/WorkExperiences.component";
 
+// Services
+import { getGitconnectedProfile } from "@/services/gitconnected";
+
 const AboutPage = ({ profile }) => {
   const { basics, education, projects, publications, work } = profile;
 
@@ -71,22 +74,22 @@ const AboutPage = ({ profile }) => {
 };
 
 export async function getStaticProps() {
-  const response = await fetch(process.env.GITCONNECTED_PORTFOLIO_API_URL);
+  try {
+    const profile = await getGitconnectedProfile(
+      process.env.GITCONNECTED_USERNAME
+    );
 
-  if (!response.ok) {
+    return {
+      props: {
+        profile,
+      },
+      revalidate: 86400,
+    };
+  } catch {
     return {
       notFound: true,
     };
   }
-
-  const profile = await response.json();
-
-  return {
-    props: {
-      profile,
-    },
-    revalidate: 86400,
-  };
 }
 
 export default AboutPage;
