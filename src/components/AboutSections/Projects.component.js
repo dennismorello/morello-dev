@@ -24,7 +24,7 @@ const Projects = ({ projectsList, ...otherProps }) => (
           }
           subtitle={summary}
         >
-          <VStack align="flex-start">
+          <VStack align="flex-start" mt={[-2, null, -4]} spacing={4}>
             <Wrap>
               {[...languages, ...libraries].map((text) => (
                 <WrapItem key={text}>
