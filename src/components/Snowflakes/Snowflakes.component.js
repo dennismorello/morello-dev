@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 // Libs
-import { drawFlakes, generateFlakes } from "@/lib/snow";
+import { SnowCanvas } from "@/lib/snow";
 
 const Snowflakes = ({ flakesCount = 128 }) => {
   const canvasRef = useRef();
@@ -12,15 +12,11 @@ const Snowflakes = ({ flakesCount = 128 }) => {
       canvasRef.current.width = document.body.clientWidth;
       canvasRef.current.height = document.body.clientHeight;
 
-      const context = canvasRef.current.getContext("2d");
-      const flakes = generateFlakes(
-        flakesCount,
-        canvasRef.current.width,
-        canvasRef.current.height
-      );
+      const canvasContext = canvasRef.current.getContext("2d");
+      const snowCanvas = new SnowCanvas(flakesCount, canvasContext);
 
       const drawFlakesInAnimationFrame = () => {
-        drawFlakes(flakes, context);
+        snowCanvas.drawFlakesOnCanvas();
 
         snowflakesAnimationId.current = requestAnimationFrame(
           drawFlakesInAnimationFrame
