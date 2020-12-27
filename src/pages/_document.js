@@ -9,7 +9,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <link
             rel="icon"
             sizes="32x32"
