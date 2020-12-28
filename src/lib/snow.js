@@ -19,7 +19,7 @@ const generateFlakes = (flakesCount, canvasWidth, canvasHeight) =>
         random(canvasHeight),
         random(2, 7),
         random(2),
-        random(0.5, 1)
+        random(0.5)
       )
   );
 
