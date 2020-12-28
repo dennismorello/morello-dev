@@ -1,5 +1,5 @@
-import NextImage from "next/image";
 import { Box } from "@chakra-ui/react";
+import NextImage from "next/image";
 
 const UserPicture = ({ alt, src, ...otherProps }) => (
   <Box

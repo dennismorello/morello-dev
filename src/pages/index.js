@@ -1,21 +1,18 @@
-import { NextSeo } from "next-seo";
 import {
+  chakra,
   Flex,
   Heading,
   Stack,
   Text,
-  chakra,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 
-// Components
 import Layout from "@/components/Layout/Layout.component";
 import LinkButton from "@/components/LinkButton/LinkButton.component";
 import ObliqueBackground from "@/components/ObliqueBackground/ObliqueBackground.component";
 import Snowflakes from "@/components/Snowflakes/Snowflakes.component";
 import UserPicture from "@/components/UserPicture/UserPicture.component";
-
-// Services
 import { getGitconnectedProfile } from "@/services/gitconnected";
 
 const HomePage = ({ user }) => {

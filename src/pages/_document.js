@@ -1,6 +1,5 @@
-import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import NextDocument, { Head, Html, Main, NextScript } from "next/document";
 
-// Components
 import GoogleAnalyticsScript from "@/components/GoogleAnalyticsScript/GoogleAnalyticsScript.component";
 import MicrosoftClarityScript from "@/components/MicrosoftClarityScript/MicrosoftClarityScript.component";
 

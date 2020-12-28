@@ -1,4 +1,3 @@
-// Utils
 import { fetchJson } from "@/utils/fetch";
 
 const { GITCONNECTED_PORTFOLIO_API_URL } = process.env;

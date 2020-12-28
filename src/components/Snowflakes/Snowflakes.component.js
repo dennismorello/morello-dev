@@ -1,9 +1,6 @@
 import { useEffect, useRef } from "react";
 
-// Hooks
 import { useWindowSize } from "@/hooks/useWindowSize";
-
-// Libs
 import { SnowCanvas } from "@/lib/snow";
 
 const Snowflakes = ({ flakesCount = 128 }) => {
@@ -35,14 +32,14 @@ const Snowflakes = ({ flakesCount = 128 }) => {
     return () => {
       cancelAnimationFrame(snowflakesAnimationId.current);
     };
-  }, [canvasRef.current, flakesCount]);
+  }, [flakesCount]);
 
   useEffect(() => {
     if (canvasRef.current) {
       canvasRef.current.width = windowSize.width;
       canvasRef.current.height = windowSize.height;
     }
-  }, [canvasRef.current, windowSize]);
+  }, [windowSize.height, windowSize.width]);
 
   return (
     <canvas
