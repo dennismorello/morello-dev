@@ -1,5 +1,12 @@
 import { NextSeo } from "next-seo";
-import { Flex, Heading, Stack, Text, chakra } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  chakra,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 // Components
 import Layout from "@/components/Layout/Layout.component";
@@ -14,9 +21,11 @@ import { getGitconnectedProfile } from "@/services/gitconnected";
 const HomePage = ({ user }) => {
   const { name, picture, summary } = user;
 
+  const flakesCount = useBreakpointValue([2 ** 7, null, 2 ** 8, null, 2 ** 9]);
+
   return (
     <>
-      <Snowflakes />
+      <Snowflakes flakesCount={flakesCount} />
 
       <Layout py={0} hasNavbar={false}>
         <NextSeo title="Home" />

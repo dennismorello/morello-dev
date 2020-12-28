@@ -1,16 +1,20 @@
 import { useEffect, useRef } from "react";
 
+// Hooks
+import { useWindowSize } from "@/hooks/useWindowSize";
+
 // Libs
 import { SnowCanvas } from "@/lib/snow";
 
 const Snowflakes = ({ flakesCount = 128 }) => {
   const canvasRef = useRef();
   const snowflakesAnimationId = useRef();
+  const windowSize = useWindowSize();
 
   useEffect(() => {
     if (canvasRef.current) {
-      canvasRef.current.width = document.body.clientWidth;
-      canvasRef.current.height = document.body.clientHeight;
+      canvasRef.current.width = window.innerWidth;
+      canvasRef.current.height = window.innerHeight;
 
       const canvasContext = canvasRef.current.getContext("2d");
       const snowCanvas = new SnowCanvas(flakesCount, canvasContext);
@@ -31,28 +35,20 @@ const Snowflakes = ({ flakesCount = 128 }) => {
     return () => {
       cancelAnimationFrame(snowflakesAnimationId.current);
     };
-  }, [canvasRef.current]);
+  }, [canvasRef.current, flakesCount]);
 
   useEffect(() => {
-    const updateCanvasSize = () => {
-      if (canvasRef.current) {
-        canvasRef.current.width = document.body.clientWidth;
-        canvasRef.current.height = document.body.clientHeight;
-      }
-    };
-
-    window.addEventListener("resize", updateCanvasSize);
-
-    return () => {
-      window.removeEventListener("resize", updateCanvasSize);
-    };
-  }, [canvasRef.current]);
+    if (canvasRef.current) {
+      canvasRef.current.width = windowSize.width;
+      canvasRef.current.height = windowSize.height;
+    }
+  }, [canvasRef.current, windowSize]);
 
   return (
     <canvas
       ref={canvasRef}
       style={{
-        position: "absolute",
+        position: "fixed",
       }}
     />
   );
