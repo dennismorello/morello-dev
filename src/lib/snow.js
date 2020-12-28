@@ -20,15 +20,19 @@ class Snowflake {
   }
 }
 
-const generateRandomSnowflakes = (flakesCount, canvasWidth, canvasHeight) =>
+const generateRandomSnowflakes = (
+  flakesCount,
+  maximumAbscissa,
+  maximumOrdinate
+) =>
   Array.from({ length: flakesCount }, () =>
-    Snowflake.random(canvasWidth, canvasHeight)
+    Snowflake.random(maximumAbscissa, maximumOrdinate)
   );
 
 export class SnowfallCanvas {
   constructor(flakesCount, canvasContext) {
     this.canvasContext = canvasContext;
-    this.flakes = generateRandomSnowflakes(
+    this.snowflakes = generateRandomSnowflakes(
       flakesCount,
       canvasContext.canvas.clientWidth,
       canvasContext.canvas.clientHeight
@@ -47,13 +51,13 @@ export class SnowfallCanvas {
   updateSnowflakesPositions() {
     const { clientHeight, clientWidth } = this.canvasContext.canvas;
 
-    for (const flake of this.flakes) {
-      flake.y += flake.density ** 2 + 1;
-      flake.x += Math.tanh(flake.y / clientHeight - 0.5);
+    for (const snowflake of this.snowflakes) {
+      snowflake.y += snowflake.density ** 2 + 1;
+      snowflake.x += Math.tanh(snowflake.y / clientHeight - 0.5);
 
-      if (flake.y > clientHeight) {
-        flake.x = random(clientWidth);
-        flake.y = 0;
+      if (snowflake.y > clientHeight) {
+        snowflake.x = random(clientWidth);
+        snowflake.y = 0;
       }
     }
   }
@@ -66,7 +70,7 @@ export class SnowfallCanvas {
   }
 
   drawAllSnowflakes() {
-    this.flakes.forEach((flake) => this.drawSnowflake(flake));
+    this.snowflakes.forEach((snowflake) => this.drawSnowflake(snowflake));
   }
 
   drawSnowfallFrame() {
