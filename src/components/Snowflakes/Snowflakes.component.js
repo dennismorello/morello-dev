@@ -1,7 +1,10 @@
+import { chakra } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { SnowCanvas } from "@/lib/snow";
+
+const ChakraCanvas = chakra("canvas");
 
 const Snowflakes = ({ flakesCount = 128 }) => {
   const canvasRef = useRef();
@@ -41,14 +44,7 @@ const Snowflakes = ({ flakesCount = 128 }) => {
     }
   }, [windowSize.height, windowSize.width]);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        position: "fixed",
-      }}
-    />
-  );
+  return <ChakraCanvas ref={canvasRef} pos="fixed" />;
 };
 
 export default Snowflakes;
