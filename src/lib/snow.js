@@ -1,6 +1,6 @@
 import { random } from "@/utils/numbers";
 
-class Flake {
+class Snowflake {
   constructor(x, y, radius, density, opacity) {
     this.x = x;
     this.y = y;
@@ -10,11 +10,11 @@ class Flake {
   }
 }
 
-const generateFlakes = (flakesCount, canvasWidth, canvasHeight) =>
+const generateSnowflakes = (flakesCount, canvasWidth, canvasHeight) =>
   Array.from(
     { length: flakesCount },
     () =>
-      new Flake(
+      new Snowflake(
         random(canvasWidth),
         random(canvasHeight),
         random(2, 7),
@@ -23,10 +23,10 @@ const generateFlakes = (flakesCount, canvasWidth, canvasHeight) =>
       )
   );
 
-export class SnowCanvas {
+export class SnowfallCanvas {
   constructor(flakesCount, canvasContext) {
     this.canvasContext = canvasContext;
-    this.flakes = generateFlakes(
+    this.flakes = generateSnowflakes(
       flakesCount,
       canvasContext.canvas.clientWidth,
       canvasContext.canvas.clientHeight
@@ -42,7 +42,7 @@ export class SnowCanvas {
     );
   }
 
-  updateFlakesPositions() {
+  updateSnowflakesPositions() {
     const { clientHeight, clientWidth } = this.canvasContext.canvas;
 
     for (const flake of this.flakes) {
@@ -56,16 +56,20 @@ export class SnowCanvas {
     }
   }
 
-  drawFlake({ x, y, radius, opacity }) {
+  drawSnowflake({ x, y, radius, opacity }) {
     this.canvasContext.beginPath();
     this.canvasContext.fillStyle = `rgba(255, 255, 255, ${opacity})`;
     this.canvasContext.arc(x, y, radius, 0, Math.PI * 2);
     this.canvasContext.fill();
   }
 
-  drawFlakesOnCanvas() {
+  drawAllSnowflakes() {
+    this.flakes.forEach((flake) => this.drawSnowflake(flake));
+  }
+
+  drawSnowfallFrame() {
     this.clearCanvas();
-    this.flakes.forEach((flake) => this.drawFlake(flake));
-    this.updateFlakesPositions();
+    this.drawAllSnowflakes();
+    this.updateSnowflakesPositions();
   }
 }

@@ -2,13 +2,13 @@ import { chakra } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
 import { useWindowSize } from "@/hooks/useWindowSize";
-import { SnowCanvas } from "@/lib/snow";
+import { SnowfallCanvas } from "@/lib/snow";
 
 const ChakraCanvas = chakra("canvas");
 
-const Snowflakes = ({ flakesCount = 128 }) => {
+const Snowfall = ({ flakesCount = 128 }) => {
   const canvasRef = useRef();
-  const snowflakesAnimationId = useRef();
+  const snowfallAnimationFrame = useRef();
   const windowSize = useWindowSize();
 
   useEffect(() => {
@@ -17,23 +17,23 @@ const Snowflakes = ({ flakesCount = 128 }) => {
       canvasRef.current.height = window.innerHeight;
 
       const canvasContext = canvasRef.current.getContext("2d");
-      const snowCanvas = new SnowCanvas(flakesCount, canvasContext);
+      const snowfallCanvas = new SnowfallCanvas(flakesCount, canvasContext);
 
       const drawFlakesInAnimationFrame = () => {
-        snowCanvas.drawFlakesOnCanvas();
+        snowfallCanvas.drawSnowfallFrame();
 
-        snowflakesAnimationId.current = requestAnimationFrame(
+        snowfallAnimationFrame.current = requestAnimationFrame(
           drawFlakesInAnimationFrame
         );
       };
 
-      snowflakesAnimationId.current = requestAnimationFrame(
+      snowfallAnimationFrame.current = requestAnimationFrame(
         drawFlakesInAnimationFrame
       );
     }
 
     return () => {
-      cancelAnimationFrame(snowflakesAnimationId.current);
+      cancelAnimationFrame(snowfallAnimationFrame.current);
     };
   }, [flakesCount]);
 
@@ -44,7 +44,7 @@ const Snowflakes = ({ flakesCount = 128 }) => {
     }
   }, [windowSize.height, windowSize.width]);
 
-  return <ChakraCanvas ref={canvasRef} pos="fixed" />;
+  return <ChakraCanvas ref={canvasRef} pos="fixed" top={0} left={0} />;
 };
 
-export default Snowflakes;
+export default Snowfall;

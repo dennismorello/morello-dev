@@ -11,7 +11,7 @@ import { NextSeo } from "next-seo";
 import Layout from "@/components/Layout/Layout.component";
 import LinkButton from "@/components/LinkButton/LinkButton.component";
 import ObliqueBackground from "@/components/ObliqueBackground/ObliqueBackground.component";
-import Snowflakes from "@/components/Snowflakes/Snowflakes.component";
+import Snowfall from "@/components/Snowfall/Snowfall.component";
 import UserPicture from "@/components/UserPicture/UserPicture.component";
 import { getGitconnectedProfile } from "@/services/gitconnected";
 
@@ -22,7 +22,7 @@ const HomePage = ({ user }) => {
 
   return (
     <>
-      <Snowflakes flakesCount={flakesCount} />
+      <Snowfall flakesCount={flakesCount} />
 
       <Layout py={0} hasNavbar={false}>
         <NextSeo title="Home" />
