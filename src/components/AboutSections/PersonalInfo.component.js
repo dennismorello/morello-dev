@@ -1,6 +1,5 @@
 import { Link, SimpleGrid } from "@chakra-ui/react";
 
-// Components
 import DetailRow from "@/components/DetailRow/DetailRow.component";
 
 const PersonalInfo = ({ name, email, location, role, ...otherProps }) => (

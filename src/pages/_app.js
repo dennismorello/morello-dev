@@ -1,18 +1,15 @@
-import { useEffect } from "react";
+import "@/styles/main.css";
+
+import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
-import { ChakraProvider } from "@chakra-ui/react";
+import { useEffect } from "react";
 
-// Configurations
-import defaultSeo, { socialProfileJsonLd } from "../next-seo.config";
-import theme from "../theme";
-
-// Libs
 import { pageView } from "@/lib/gtag";
 
-// Styles
-import "@/styles/main.css";
+import defaultSeo, { socialProfileJsonLd } from "../next-seo.config";
+import theme from "../theme";
 
 function App({ Component, pageProps }) {
   const router = useRouter();

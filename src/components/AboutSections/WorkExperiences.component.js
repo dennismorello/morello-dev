@@ -1,6 +1,5 @@
 import { Link, Text, VStack } from "@chakra-ui/react";
 
-// Components
 import DateRange from "@/components/DateRange/DateRange.component";
 import DescriptiveBlock from "@/components/DescriptiveBlock/DescriptiveBlock.component";
 

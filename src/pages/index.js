@@ -1,22 +1,28 @@
+import {
+  chakra,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { Flex, Heading, Stack, Text, chakra } from "@chakra-ui/react";
 
-// Components
 import Layout from "@/components/Layout/Layout.component";
 import LinkButton from "@/components/LinkButton/LinkButton.component";
 import ObliqueBackground from "@/components/ObliqueBackground/ObliqueBackground.component";
 import Snowflakes from "@/components/Snowflakes/Snowflakes.component";
 import UserPicture from "@/components/UserPicture/UserPicture.component";
-
-// Services
 import { getGitconnectedProfile } from "@/services/gitconnected";
 
 const HomePage = ({ user }) => {
   const { name, picture, summary } = user;
 
+  const flakesCount = useBreakpointValue([2 ** 7, null, 2 ** 8, null, 2 ** 9]);
+
   return (
     <>
-      <Snowflakes />
+      <Snowflakes flakesCount={flakesCount} />
 
       <Layout py={0} hasNavbar={false}>
         <NextSeo title="Home" />

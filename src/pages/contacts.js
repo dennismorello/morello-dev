@@ -1,7 +1,6 @@
+import { chakra, Container, Heading, SimpleGrid } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { Container, Heading, SimpleGrid, chakra } from "@chakra-ui/react";
 
-// Components
 import Layout from "@/components/Layout/Layout.component";
 import SocialCard from "@/components/SocialCard/SocialCard.component";
 

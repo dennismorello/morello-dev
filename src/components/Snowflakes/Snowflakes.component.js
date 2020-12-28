@@ -1,16 +1,20 @@
+import { chakra } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
-// Libs
+import { useWindowSize } from "@/hooks/useWindowSize";
 import { SnowCanvas } from "@/lib/snow";
+
+const ChakraCanvas = chakra("canvas");
 
 const Snowflakes = ({ flakesCount = 128 }) => {
   const canvasRef = useRef();
   const snowflakesAnimationId = useRef();
+  const windowSize = useWindowSize();
 
   useEffect(() => {
     if (canvasRef.current) {
-      canvasRef.current.width = document.body.clientWidth;
-      canvasRef.current.height = document.body.clientHeight;
+      canvasRef.current.width = window.innerWidth;
+      canvasRef.current.height = window.innerHeight;
 
       const canvasContext = canvasRef.current.getContext("2d");
       const snowCanvas = new SnowCanvas(flakesCount, canvasContext);
@@ -31,31 +35,16 @@ const Snowflakes = ({ flakesCount = 128 }) => {
     return () => {
       cancelAnimationFrame(snowflakesAnimationId.current);
     };
-  }, [canvasRef.current]);
+  }, [flakesCount]);
 
   useEffect(() => {
-    const updateCanvasSize = () => {
-      if (canvasRef.current) {
-        canvasRef.current.width = document.body.clientWidth;
-        canvasRef.current.height = document.body.clientHeight;
-      }
-    };
+    if (canvasRef.current) {
+      canvasRef.current.width = windowSize.width;
+      canvasRef.current.height = windowSize.height;
+    }
+  }, [windowSize.height, windowSize.width]);
 
-    window.addEventListener("resize", updateCanvasSize);
-
-    return () => {
-      window.removeEventListener("resize", updateCanvasSize);
-    };
-  }, [canvasRef.current]);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        position: "absolute",
-      }}
-    />
-  );
+  return <ChakraCanvas ref={canvasRef} pos="fixed" />;
 };
 
 export default Snowflakes;

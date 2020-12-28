@@ -1,4 +1,4 @@
-import { random } from "./numbers";
+import { random } from "@/utils/numbers";
 
 class Flake {
   constructor(x, y, radius, density, opacity) {
@@ -11,15 +11,17 @@ class Flake {
 }
 
 const generateFlakes = (flakesCount, canvasWidth, canvasHeight) =>
-  Array.from({ length: flakesCount }).map(() => {
-    return new Flake(
-      random(canvasWidth),
-      random(canvasHeight),
-      random(2, 7),
-      random(2),
-      random(0.5, 1)
-    );
-  });
+  Array.from(
+    { length: flakesCount },
+    () =>
+      new Flake(
+        random(canvasWidth),
+        random(canvasHeight),
+        random(2, 7),
+        random(2),
+        random(0.5)
+      )
+  );
 
 export class SnowCanvas {
   constructor(flakesCount, canvasContext) {
@@ -31,32 +33,39 @@ export class SnowCanvas {
     );
   }
 
-  updateFlakesPositions() {
-    for (const flake of this.flakes) {
-      flake.y += Math.pow(flake.density, 2) + 1;
-
-      if (flake.y > this.canvasContext.canvas.clientHeight) {
-        flake.x = random(this.canvasContext.canvas.clientWidth);
-        flake.y = 0;
-      }
-    }
-  }
-
-  drawFlakesOnCanvas() {
+  clearCanvas() {
     this.canvasContext.clearRect(
       0,
       0,
       this.canvasContext.canvas.clientWidth,
       this.canvasContext.canvas.clientHeight
     );
+  }
 
-    this.flakes.forEach(({ x, y, radius, opacity }) => {
-      this.canvasContext.beginPath();
-      this.canvasContext.fillStyle = `rgba(255, 255, 255, ${opacity})`;
-      this.canvasContext.arc(x, y, radius, 0, Math.PI * 2, true);
-      this.canvasContext.fill();
-    });
+  updateFlakesPositions() {
+    const { clientHeight, clientWidth } = this.canvasContext.canvas;
 
+    for (const flake of this.flakes) {
+      flake.y += flake.density ** 2 + 1;
+      flake.x += Math.tanh(flake.y / clientHeight - 0.5);
+
+      if (flake.y > clientHeight) {
+        flake.x = random(clientWidth);
+        flake.y = 0;
+      }
+    }
+  }
+
+  drawFlake({ x, y, radius, opacity }) {
+    this.canvasContext.beginPath();
+    this.canvasContext.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+    this.canvasContext.arc(x, y, radius, 0, Math.PI * 2);
+    this.canvasContext.fill();
+  }
+
+  drawFlakesOnCanvas() {
+    this.clearCanvas();
+    this.flakes.forEach((flake) => this.drawFlake(flake));
     this.updateFlakesPositions();
   }
 }

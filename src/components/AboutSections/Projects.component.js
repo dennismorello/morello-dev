@@ -1,6 +1,5 @@
 import { Link, Tag, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
-// Components
 import DescriptiveBlock from "@/components/DescriptiveBlock/DescriptiveBlock.component";
 
 const Projects = ({ projectsList, ...otherProps }) => (

@@ -1,6 +1,5 @@
 import { Box, Stack } from "@chakra-ui/react";
 
-// Components
 import NavBar from "@/components/NavBar/NavBar.component";
 
 const Layout = ({ hasNavbar = true, children, ...otherProps }) => (

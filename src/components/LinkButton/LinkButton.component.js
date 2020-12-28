@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
 const LinkButton = ({ href, ...otherProps }) => {
   return (
