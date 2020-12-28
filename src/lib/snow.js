@@ -8,25 +8,27 @@ class Snowflake {
     this.density = density;
     this.opacity = opacity;
   }
+
+  static random(maximumAbscissa, maximumOrdinate) {
+    return new this(
+      random(maximumAbscissa),
+      random(maximumOrdinate),
+      random(2, 7),
+      random(2),
+      random(0.5)
+    );
+  }
 }
 
-const generateSnowflakes = (flakesCount, canvasWidth, canvasHeight) =>
-  Array.from(
-    { length: flakesCount },
-    () =>
-      new Snowflake(
-        random(canvasWidth),
-        random(canvasHeight),
-        random(2, 7),
-        random(2),
-        random(0.5)
-      )
+const generateRandomSnowflakes = (flakesCount, canvasWidth, canvasHeight) =>
+  Array.from({ length: flakesCount }, () =>
+    Snowflake.random(canvasWidth, canvasHeight)
   );
 
 export class SnowfallCanvas {
   constructor(flakesCount, canvasContext) {
     this.canvasContext = canvasContext;
-    this.flakes = generateSnowflakes(
+    this.flakes = generateRandomSnowflakes(
       flakesCount,
       canvasContext.canvas.clientWidth,
       canvasContext.canvas.clientHeight
