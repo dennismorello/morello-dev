@@ -43,11 +43,14 @@ export class SnowCanvas {
   }
 
   updateFlakesPositions() {
+    const { clientHeight, clientWidth } = this.canvasContext.canvas;
+
     for (const flake of this.flakes) {
       flake.y += flake.density ** 2 + 1;
+      flake.x += Math.tanh(flake.y / clientHeight - 0.5);
 
-      if (flake.y > this.canvasContext.canvas.clientHeight) {
-        flake.x = random(this.canvasContext.canvas.clientWidth);
+      if (flake.y > clientHeight) {
+        flake.x = random(clientWidth);
         flake.y = 0;
       }
     }
