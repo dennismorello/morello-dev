@@ -38,11 +38,13 @@ const Snowfall = ({ flakesCount = 128 }) => {
   }, [flakesCount]);
 
   useEffect(() => {
-    if (canvasRef.current) {
-      canvasRef.current.width = windowSize.width;
-      canvasRef.current.height = windowSize.height;
+    const { height, width } = windowSize;
+
+    if (height && width && canvasRef.current) {
+      canvasRef.current.width = width;
+      canvasRef.current.height = height;
     }
-  }, [windowSize.height, windowSize.width]);
+  }, [windowSize]);
 
   return <ChakraCanvas ref={canvasRef} pos="fixed" top={0} left={0} />;
 };
