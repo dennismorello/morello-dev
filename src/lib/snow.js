@@ -29,7 +29,7 @@ const generateRandomSnowflakes = (
     Snowflake.random(maximumAbscissa, maximumOrdinate)
   );
 
-export class SnowfallCanvas {
+class SnowfallCanvas {
   constructor(flakesCount, canvasContext) {
     this.canvasContext = canvasContext;
     this.snowflakes = generateRandomSnowflakes(
@@ -79,3 +79,5 @@ export class SnowfallCanvas {
     this.updateSnowflakesPositions();
   }
 }
+
+export default SnowfallCanvas;

@@ -1,8 +1,8 @@
 import { chakra } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
-import { useWindowSize } from "@/hooks/useWindowSize";
-import { SnowfallCanvas } from "@/lib/snow";
+import useWindowSize from "@/hooks/useWindowSize";
+import SnowfallCanvas from "@/lib/snow";
 
 const ChakraCanvas = chakra("canvas");
 
