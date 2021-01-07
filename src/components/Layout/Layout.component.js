@@ -10,8 +10,10 @@ const Layout = ({ hasNavbar = true, children, ...otherProps }) => (
   >
     {hasNavbar && (
       <NavBar
-        h={16}
-        px={[0, null, 4]}
+        pl={["env(safe-area-inset-left)", null, 4]}
+        pr={["env(safe-area-inset-right)", null, 4]}
+        pt={4}
+        pb={["max(1rem, env(safe-area-inset-bottom))", null, 4]}
         justify={["space-evenly", null, "flex-end"]}
         spacing={[0, null, 4]}
         bg="rgba(26, 32, 44, 0.75)"

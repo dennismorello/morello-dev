@@ -29,7 +29,10 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width, viewport-fit=cover"
+        />
       </Head>
       <DefaultSeo {...defaultSeo} />
       <SocialProfileJsonLd {...socialProfileJsonLd} />
