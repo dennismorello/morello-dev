@@ -1,7 +1,7 @@
 import { random } from "@/utils/numbers";
 
 class Snowflake {
-  constructor(x, y, radius, density, opacity) {
+  constructor({ x, y, radius, density, opacity }) {
     this.x = x;
     this.y = y;
     this.radius = radius;
@@ -10,13 +10,13 @@ class Snowflake {
   }
 
   static random(maximumAbscissa, maximumOrdinate) {
-    return new this(
-      random(maximumAbscissa),
-      random(maximumOrdinate),
-      random(2, 7),
-      random(2),
-      random(0.5)
-    );
+    return new this({
+      x: random(maximumAbscissa),
+      y: random(maximumOrdinate),
+      radius: random(2, 7),
+      density: random(2),
+      opacity: random(0.5),
+    });
   }
 }
 
@@ -55,9 +55,9 @@ class SnowfallCanvas {
       snowflake.y += snowflake.density ** 2 + 1;
       snowflake.x += Math.tanh(snowflake.y / clientHeight - 0.5);
 
-      if (snowflake.y > clientHeight) {
+      if (snowflake.y > clientHeight + snowflake.radius) {
         snowflake.x = random(clientWidth);
-        snowflake.y = 0;
+        snowflake.y = -snowflake.radius;
       }
     }
   }
