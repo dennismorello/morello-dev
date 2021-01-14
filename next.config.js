@@ -15,4 +15,28 @@ module.exports = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/github",
+        destination: "https://github.com/dennismorello",
+        permanent: true,
+      },
+      {
+        source: "/instagram",
+        destination: "https://instagram.com/dennismrl",
+        permanent: true,
+      },
+      {
+        source: "/linkedin",
+        destination: "https://linkedin.com/in/dennismorello",
+        permanent: true,
+      },
+      {
+        source: "/twitter",
+        destination: "https://twitter.com/dennismorello",
+        permanent: true,
+      },
+    ];
+  },
 };

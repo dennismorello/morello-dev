@@ -26,25 +26,16 @@ const ContactsPage = () => (
 
     <Container as="section" maxW="6xl">
       <SimpleGrid columns={[1, 2, 4]} gap={[6, null, 8]}>
-        <SocialCard
-          href="https://twitter.com/dennismorello"
-          colorScheme="twitter"
-        >
+        <SocialCard href="/twitter" colorScheme="twitter">
           Twitter
         </SocialCard>
-        <SocialCard href="https://github.com/dennismorello" colorScheme="gray">
+        <SocialCard href="/github" colorScheme="gray">
           GitHub
         </SocialCard>
-        <SocialCard
-          href="https://instagram.com/dennismrl"
-          colorScheme="instagram"
-        >
+        <SocialCard href="/instagram" colorScheme="instagram">
           Instagram
         </SocialCard>
-        <SocialCard
-          href="https://linkedin.com/in/dennismorello"
-          colorScheme="linkedin"
-        >
+        <SocialCard href="/linkedin" colorScheme="linkedin">
           LinkedIn
         </SocialCard>
       </SimpleGrid>
