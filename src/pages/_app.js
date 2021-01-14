@@ -11,18 +11,14 @@ import { pageView } from "@/lib/gtag";
 import defaultSeo, { socialProfileJsonLd } from "../next-seo.config";
 import theme from "../theme";
 
-function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      pageView(url);
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", pageView);
 
     return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeComplete", pageView);
     };
   }, [router.events]);
 
@@ -41,6 +37,6 @@ function App({ Component, pageProps }) {
       </ChakraProvider>
     </>
   );
-}
+};
 
 export default App;
