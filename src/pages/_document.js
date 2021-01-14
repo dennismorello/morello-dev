@@ -17,20 +17,9 @@ export default class Document extends NextDocument {
           <link rel="manifest" href="/site.webmanifest" />
           <link
             rel="preload"
-            href="/fonts/Poppins/Poppins-Regular.ttf"
+            href="/fonts/Poppins/poppins-v15-latin-regular.woff2"
             as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/fonts/Poppins/Poppins-Bold.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/fonts/Poppins/Poppins-Black.ttf"
-            as="font"
+            type="font/woff2"
             crossOrigin=""
           />
           <GoogleAnalyticsScript />

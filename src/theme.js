@@ -6,8 +6,10 @@ const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    body: "Poppins, sans-serif",
-    heading: "Poppins, sans-serif",
+    body:
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    heading:
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
   },
   colors: {
     instagram: {
