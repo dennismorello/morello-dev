@@ -7,7 +7,8 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="UTF-8" />
+          <meta charSet="utf-8" />
+          <meta name="theme-color" content="#4fd1c5" />
           <link
             rel="icon"
             sizes="32x32"
