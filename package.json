@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix . --ignore-path ./.gitignore",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc --ignore-path ./.gitignore"
+    "format": "prettier --write './**/*.{js,jsx,css,md,json}' --config ./.prettierrc --ignore-path ./.gitignore"
   },
   "husky": {
     "hooks": {
@@ -16,15 +16,15 @@
   },
   "lint-staged": {
     "./**/*.{js,jsx}": [
-      "eslint --fix"
+      "eslint --fix . --ignore-path ./.gitignore"
     ]
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.1.0",
+    "@chakra-ui/react": "^1.1.4",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "date-fns": "^2.16.1",
-    "framer-motion": "^3.1.1",
+    "framer-motion": "^3.2.1",
     "lodash": "^4.17.20",
     "next": "^10.0.5",
     "next-seo": "^4.17.0",
@@ -32,7 +32,7 @@
     "react-dom": "17.0.1"
   },
   "resolutions": {
-    "webpack": "^5.11.1"
+    "webpack": "^5.14.0"
   },
   "devDependencies": {
     "eslint": "^7.17.0",
