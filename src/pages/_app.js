@@ -1,11 +1,10 @@
-import "@/styles/main.css";
-
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import { useEffect } from "react";
 
+import Fonts from "@/components/Fonts/Fonts.component";
 import { pageView } from "@/lib/gtag";
 
 import defaultSeo, { socialProfileJsonLd } from "../next-seo.config";
@@ -32,7 +31,9 @@ const App = ({ Component, pageProps }) => {
       </Head>
       <DefaultSeo {...defaultSeo} />
       <SocialProfileJsonLd {...socialProfileJsonLd} />
+
       <ChakraProvider theme={theme}>
+        <Fonts />
         <Component {...pageProps} />
       </ChakraProvider>
     </>

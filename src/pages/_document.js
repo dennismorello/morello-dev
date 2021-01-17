@@ -18,7 +18,14 @@ class Document extends NextDocument {
           <link rel="manifest" href="/site.webmanifest" />
           <link
             rel="preload"
-            href="/fonts/Poppins/poppins-v15-latin-regular.woff2"
+            href="/fonts/poppins-v15-latin/poppins-v15-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/poppins-v15-latin/poppins-v15-latin-900.woff2"
             as="font"
             type="font/woff2"
             crossOrigin=""
