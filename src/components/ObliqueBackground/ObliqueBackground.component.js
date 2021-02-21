@@ -9,7 +9,7 @@ const ObliqueBackground = (props) => {
       w="100%"
       top="-50%"
       left="-75%"
-      bgColor="teal.300"
+      bgColor="blue.300"
       transform="rotate(-12deg)"
       {...props}
     />

@@ -22,7 +22,7 @@ const SectionWithHeading = ({
       }}
       {...otherProps}
     >
-      <Heading as="h2" size="lg" color="teal.300" {...titleProps}>
+      <Heading as="h2" size="lg" color="blue.300" {...titleProps}>
         {id ? <Link href={`#${id}`}>{title}</Link> : title}
       </Heading>
       {children}

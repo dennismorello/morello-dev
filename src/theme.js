@@ -32,7 +32,7 @@ const theme = extendTheme({
         textTransform: "uppercase",
       },
       defaultProps: {
-        colorScheme: "teal",
+        colorScheme: "blue",
       },
     },
     Container: {
@@ -62,13 +62,13 @@ const theme = extendTheme({
       },
       variants: {
         filled: () => ({
-          field: { _focus: { borderColor: "teal.200" }, rounded: "full" },
+          field: { _focus: { borderColor: "blue.200" }, rounded: "full" },
         }),
       },
     },
     Tag: {
       defaultProps: {
-        colorScheme: "teal",
+        colorScheme: "blue",
       },
     },
     Textarea: {
@@ -78,7 +78,7 @@ const theme = extendTheme({
       },
       variants: {
         filled: () => ({
-          _focus: { borderColor: "teal.200" },
+          _focus: { borderColor: "blue.200" },
           borderRadius: "3xl",
         }),
       },

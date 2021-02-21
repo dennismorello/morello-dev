@@ -21,7 +21,7 @@ const ContactsPage = () => (
       mb={[10, null, 20]}
       mt={[-2, null, undefined]}
     >
-      Contact <chakra.span color="teal.300">me</chakra.span>
+      Contact <chakra.span color="blue.300">me</chakra.span>
     </Heading>
 
     <Container as="section" maxW="6xl">

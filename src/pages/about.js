@@ -30,7 +30,7 @@ const AboutPage = ({ profile }) => {
         mb={[10, null, 20]}
         mt={[-2, null, undefined]}
       >
-        About <chakra.span color="teal.300">me</chakra.span>
+        About <chakra.span color="blue.300">me</chakra.span>
       </Heading>
 
       <SectionWithHeading id="personal-info" title="Personal info">

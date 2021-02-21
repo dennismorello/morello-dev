@@ -34,7 +34,10 @@ const HomePage = ({ user }) => {
           minH="100vh"
           py={[16, null, 24]}
         >
-          <ObliqueBackground display={["none", null, "block"]} />
+          <ObliqueBackground
+            bgColor="blue.300"
+            display={["none", null, "block"]}
+          />
 
           <Stack
             direction={["column", null, "row"]}
@@ -61,7 +64,7 @@ const HomePage = ({ user }) => {
                   fontWeight="black"
                   lineHeight="100%"
                 >
-                  I am <chakra.span color="teal.300">{name}</chakra.span>
+                  I am <chakra.span color="blue.200">{name}</chakra.span>
                 </Heading>
               </Stack>
 
@@ -73,7 +76,12 @@ const HomePage = ({ user }) => {
                   </Text>
                 ))}
               </Stack>
-              <LinkButton href="/about" size="lg" rightIcon="&rarr;">
+              <LinkButton
+                colorScheme="blue"
+                href="/about"
+                size="lg"
+                rightIcon="&rarr;"
+              >
                 More about me
               </LinkButton>
             </Stack>
